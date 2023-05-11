@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <section>          
+          <img
+            width="50px"
+            src="https://yt3.ggpht.com/a/AGF-l7_gxaZktmHADjcM5nVmCyQeupZS2vf15n638A=s900-mo-c-c0xffffffff-rj-k-no"
+            alt=""
+            srcset=""
+          />
+        </section>
+
+        <section class="mainFocus">
+          <textarea
+            id="TextArea"
+            onclick="ocultarModal()"
+            name="textToEncode"
+            placeholder="Ingresa un texto..."
+          ></textarea>
+
+          <span id="atencionMessage">Solo letras, sin acentos</span>
+
+          <section class="mainButtons">
+            <button type="submit" class="buttonEncode" onclick="validarCampoEncode()">
+              Encriptar!
+            </button>
+            <button type="submit" class="buttonDecode" onclick="validarCampoDecode()">
+              Desencriptar!
+            </button>
+          </section>
+        </section>
+      </article>
+
+      <article class="articleModalMessageNotFound">
+        <section id="modal">
+          <img id="imageTextNotFound" src="./textNotFound.png" alt="Text not found"/>
+          <h2 class="titleModal">Ningún mensaje fue encontrado</h2>
+          <p class="contentModal">Ingresa el texto que desees encriptar</p>
+        </section>
+
+        <section id="resultmodal">
+          <textarea id="resultTextArea" name="textToEncode" placeholder="Insert a text here"></textarea>
+
+          <button
+            type="submit" id="btnCopy" class="buttonEncode buttonCopy" onclick="copyText()">
+            Copy!
+          </button>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">Desarrollado por: 🤍-Mar-🤍</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

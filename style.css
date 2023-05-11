@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+textarea {
+  resize: none;
+}
+#imageTextNotFound {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+    margin-bottom: 10vh;
+  }
+
+  #TextArea {
+    display: block;
+    border: none;
+    height: 40vh;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 0px 0px 0px;
+  }
+  ::placeholder {
+    color: gray;
+    font-size: 22px;
+    display: inline;
+    padding: 4px 4px 4px 4px;
+  }
+  #atencionMessage {
+    background-image: url(./atencion.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: left;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+  }
+  .buttonEncode,
+  .buttonDecode {
+    display: block;
+    margin: 0 auto;
+    width: 85vw;
+    height: 5vh;
+    border-radius: 15px;
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+  }
+  .buttonEncode {
+    max-width: 500px;
+    color: #fff;
+    background-color: #0a3871;
+    border: none;
+  }
+  .buttonDecode {
+    max-width: 500px;
+    color: #0a3871;
+    background-color: #fff;
+    border: solid 1px;
+  }
+  #modal {
+    display: none;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px -3px rgba(0, 0, 0, 0.75);
+    width: 85vw;
+    background-color: rosybrown;
+    background-color: white;
+  }
+  .titleModal {
+    padding: 20px;
+    text-align: center;
+  }
+  .contentModal {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+  #resultTextArea {
+    display: block;
+    border: none;
+    height: 40vh;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  #resultmodal {
+    display: none;
+  }
+  /* Estilos para dispositivos móviles */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  main {
+    background-color: rgb(154, 235, 245);
+  }
+  #TextArea {
+    display: block;
+    border: none;
+    height: 40vh;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: auto;
+    font-size: 30px;
+  }
+  #atencionMessage {
+    background-image: url(./atencion.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: left;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    margin: 20px;
+    margin-left: 55px;
+    display: flex;
+  }
+
+  .mainButtons {
+    display: flex;
+  }
+  .buttonEncode,
+  .buttonDecode {
+    display: block;
+    width: 35%;
+    height: 50px;
+    border-radius: 15px;
+
+    margin: auto;
+    font-size: 16px;
+  }
+  .buttonEncode {
+    max-width: 500px;
+    color: #fff;
+    background-color: #0a3871;
+    border: none;
+  }
+  .buttonDecode {
+    max-width: 500px;
+    color: #0a3871;
+    background-color: #fff;
+    border: solid 1px;
+  }
+  .articleModalMessageNotFound {
+    display: block;
+  }
+  #modal {
+    display: none;
+    width: 40%;
+    height: 100px;
+    background-color: violet;
+    align-items: center;
+    margin: auto;
+    margin-top: 52px;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.08);
+  }
+  .titleModal {
+    text-align: center;
+    font-size: 17px;
+    padding: 12px;
+  }
+  .contentModal {
+    text-align: center;
+    padding: 12px;
+    font-size: 15px;
+  }
+  #resultmodal {
+    background-color: rgb(201, 182, 232);
+    display: none;
+  }
+  #resultTextArea {
+    display: block;
+    border: none;
+    height: 40vh;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: auto;
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  .buttonEncode {
+    width: 90%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    color: #0a3871;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0a3871;
+  }
+  .footer {
+    margin-top: 25px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    background-color: #f3f5fc;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+  }
+  .mainFocus {
+    background-color: f3f5fc;
+    display: grid;
+    grid-template-rows: 16fr 0.5fr 2fr;
+    grid-template-columns: repeat(1fr, 1fr);
+    gap: 10px;
+  }
+  #TextArea {
+    margin: 50px 0px 0px 12.5vw;
+    border: none;
+    background-color: #f3f5fc;
+    height: 70vh;
+    font-size: 30px;
+  }
+  #atencionMessage {
+    margin: 0px 0px 0px 12.5vw;
+    background-image: url(./atencion.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: left;
+    padding-left: 20px;
+  }
+  .articleModalMessageNotFound {
+    background-color: #fff;
+    margin: 30px 20px 30px 20px;
+  }
+  #modal {
+    display: block;
+    text-align: center;
+  }
+  #imageTextNotFound {
+    display: block;
+  }
+  #resultmodal {
+    display: none;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    text-align: center;
+  }
+  #resultTextArea {
+    display: block;
+    border: none;
+    height: 90%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: auto;
+    font-size: 30px;
+    margin-top: 40px;
+  }
+  .full-height {
+    grid-row: 1 / span 2;
+    /* El elemento ocupa la primera fila y se extiende hasta la segunda */
+  }
+  .mainButtons {
+    margin: 0 auto;
+  }
+  .buttonEncode,
+  .buttonDecode {
+    width: 20vw;
+    height: 5vh;
+    border-radius: 15px;
+    margin: 5px 10px 5px 10px;
+    font-size: 16px;
+  }
+  .buttonCopy {
+    max-width: 500px;
+    color: #fff;
+    background-color: #0a3871;
+    border: none;
+  }
+  .buttonDecode {
+    max-width: 500px;
+    color: #0a3871;
+    background-color: #d8dfe8;
+    border: solid 1px;
+  }
+  .buttonDecode:hover {
+    max-width: 500px;
+    color: #ffffff;
+    background-color: rgb(151, 188, 245);
+    border: solid 1px;
+  }
+}
